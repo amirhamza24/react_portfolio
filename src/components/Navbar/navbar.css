@@ -1,0 +1,9 @@
+.navbar-logo {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}

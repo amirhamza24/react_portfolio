@@ -28,36 +28,8 @@
   padding: 0;
 }
 
-body {
+/* body {
   background-color: var(--bg_color);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text_color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Content sections */
-.content-section {
-  margin-top: 80px;
-  background-color: var(--card_bg);
-}
-
-.section-header {
-  text-align: center;
-  font-size: 36px;
-  margin-top: 60px;
-  letter-spacing: 5px;
-  font-family: "Times New Roman", Times, serif;
-  color: var(--heading_color);
-}
+} */

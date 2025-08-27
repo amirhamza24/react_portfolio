@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -6,34 +7,34 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="shadow-md bg-primary fixed w-full z-50 px-10">
+      <div className="mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="#home" className="text-2xl font-bold text-blue-600">
-              Amir Hamza
+          <div className="flex-shrink-0 navbar-logo">
+            <a href="#home" className="text-3xl font-[800] font-mono">
+              Amir{" "}
+              <span className="text-textMain text-shadow-main inline-block">
+                Hamza
+              </span>
             </a>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-800 hover:text-blue-600">
+            <a href="#home" className="text-white hover:text-blue-600">
               Home
             </a>
-            <a href="#education" className="text-gray-800 hover:text-blue-600">
+            <a href="#education" className="text-white hover:text-blue-600">
               Education
             </a>
-            <a href="#services" className="text-gray-800 hover:text-blue-600">
+            <a href="#services" className="text-white hover:text-blue-600">
               Services
             </a>
-            <a
-              href="#testimonials"
-              className="text-gray-800 hover:text-blue-600"
-            >
-              Testimonials
+            <a href="#testimonials" className="text-white hover:text-blue-600">
+              Projects
             </a>
-            <a href="#contact" className="text-gray-800 hover:text-blue-600">
+            <a href="#contact" className="text-white hover:text-blue-600">
               Contact
             </a>
           </div>
@@ -42,7 +43,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-800 hover:text-blue-600 focus:outline-none"
+              className="text-white hover:text-blue-600 focus:outline-none"
             >
               {isOpen ? (
                 <svg
@@ -80,33 +81,30 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md">
+        <div className="md:hidden shadow-md">
           <div className="px-4 pt-2 pb-3 space-y-1">
-            <a href="#home" className="block text-gray-800 hover:text-blue-600">
+            <a href="#home" className="block text-white hover:text-blue-600">
               Home
             </a>
             <a
               href="#education"
-              className="block text-gray-800 hover:text-blue-600"
+              className="block text-white hover:text-blue-600"
             >
               Education
             </a>
             <a
               href="#services"
-              className="block text-gray-800 hover:text-blue-600"
+              className="block text-white hover:text-blue-600"
             >
               Services
             </a>
             <a
               href="#testimonials"
-              className="block text-gray-800 hover:text-blue-600"
+              className="block text-white hover:text-blue-600"
             >
               Testimonials
             </a>
-            <a
-              href="#contact"
-              className="block text-gray-800 hover:text-blue-600"
-            >
+            <a href="#contact" className="block text-white hover:text-blue-600">
               Contact
             </a>
           </div>
