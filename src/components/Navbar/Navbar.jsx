@@ -37,7 +37,11 @@ export default function Navbar() {
                 key={route.id}
                 to={route.path}
                 className={({ isActive }) =>
-                  `nav-link ${isActive ? "active" : ""}`
+                  `hover:text-textMain  hover:border-b-[3px] border-b-textMain ${
+                    isActive
+                      ? "text-textMain border-b-[3px] hover:border-b-[3px] border-b-textMain"
+                      : "text-white"
+                  }`
                 }
               >
                 {route.name}
@@ -93,10 +97,14 @@ export default function Navbar() {
               <NavLink
                 key={route.id}
                 to={route.path}
-                onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `block nav-link ${isActive ? "active" : ""}`
+                  `block hover:text-textMain hover:border-b-[3px] border-b-textMain ${
+                    isActive
+                      ? "text-textMain font-bold hover:border-b-[3px] border-b-textMain"
+                      : "text-white"
+                  }`
                 }
+                onClick={() => setIsOpen(false)} // close mobile menu after click
               >
                 {route.name}
               </NavLink>

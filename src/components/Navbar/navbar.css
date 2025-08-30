@@ -7,35 +7,3 @@
 .navbar-logo:hover {
   transform: scale(1.1);
 }
-
-.nav-link {
-  position: relative;
-  color: white;
-  text-decoration: none;
-  padding-bottom: 4px; /* space for underline */
-  transition: color 0.3s ease;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px; /* thickness of the underline */
-  width: 0; /* initially hidden */
-  background-color: #00bfff; /* your "textMain" color */
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%; /* underline fills */
-  left: 0;
-}
-
-.nav-link.active {
-  color: #00bfff; /* active text color */
-}
-
-.nav-link.active::after {
-  width: 100%; /* underline stays visible */
-}
