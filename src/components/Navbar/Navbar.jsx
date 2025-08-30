@@ -37,35 +37,13 @@ export default function Navbar() {
                 key={route.id}
                 to={route.path}
                 className={({ isActive }) =>
-                  `hover:text-textMain hover:border-b-[3px] border-b-transparent ${
-                    isActive
-                      ? "text-textMain border-b-[3px] border-b-textMain"
-                      : "text-white"
-                  }`
+                  `nav-link ${isActive ? "active" : ""}`
                 }
               >
                 {route.name}
               </NavLink>
             ))}
           </div>
-
-          {/* <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-white hover:text-blue-600">
-              Home
-            </a>
-            <a href="#education" className="text-white hover:text-blue-600">
-              Education
-            </a>
-            <a href="#services" className="text-white hover:text-blue-600">
-              Services
-            </a>
-            <a href="#testimonials" className="text-white hover:text-blue-600">
-              Projects
-            </a>
-            <a href="#contact" className="text-white hover:text-blue-600">
-              Contact
-            </a>
-          </div> */}
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -115,47 +93,16 @@ export default function Navbar() {
               <NavLink
                 key={route.id}
                 to={route.path}
+                onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `block hover:text-textMain ${
-                    isActive ? "text-textMain font-bold" : "text-white"
-                  }`
+                  `block nav-link ${isActive ? "active" : ""}`
                 }
-                onClick={() => setIsOpen(false)} // close mobile menu after click
               >
                 {route.name}
               </NavLink>
             ))}
           </div>
         </div>
-
-        // <div className="md:hidden shadow-md">
-        //   <div className="px-4 pt-2 pb-3 space-y-1">
-        //     <a href="#home" className="block text-white hover:text-blue-600">
-        //       Home
-        //     </a>
-        //     <a
-        //       href="#education"
-        //       className="block text-white hover:text-blue-600"
-        //     >
-        //       Education
-        //     </a>
-        //     <a
-        //       href="#services"
-        //       className="block text-white hover:text-blue-600"
-        //     >
-        //       Services
-        //     </a>
-        //     <a
-        //       href="#testimonials"
-        //       className="block text-white hover:text-blue-600"
-        //     >
-        //       Testimonials
-        //     </a>
-        //     <a href="#contact" className="block text-white hover:text-blue-600">
-        //       Contact
-        //     </a>
-        //   </div>
-        // </div>
       )}
     </nav>
   );
