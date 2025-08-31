@@ -37,11 +37,7 @@ export default function Navbar() {
                 key={route.id}
                 to={route.path}
                 className={({ isActive }) =>
-                  `hover:text-textMain  hover:border-b-[3px] border-b-textMain ${
-                    isActive
-                      ? "text-textMain border-b-[3px] hover:border-b-[3px] border-b-textMain"
-                      : "text-white"
-                  }`
+                  `nav-link ${isActive ? "active" : ""}`
                 }
               >
                 {route.name}

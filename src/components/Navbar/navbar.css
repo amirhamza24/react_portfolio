@@ -7,3 +7,32 @@
 .navbar-logo:hover {
   transform: scale(1.1);
 }
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* start at center */
+  width: 0; /* initially hidden */
+  height: 2px; /* thickness of underline */
+  background-color: #00bfff; /* textMain color */
+  transition: width 0.3s ease, left 0.3s ease; /* smooth left-to-right */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* grow underline */
+  left: 0; /* start from left */
+}
+
+.nav-link.active {
+  color: #00bfff; /* active text color */
+}
+
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
